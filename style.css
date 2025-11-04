@@ -1,0 +1,112 @@
+/* --- Global & Accessibility --- */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Skip to content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--bs-primary);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* --- Light Mode Variables (Default) --- */
+[data-bs-theme="light"] {
+    --bs-body-bg: #f8f9fa;
+    --bs-body-color: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-card-bg: #ffffff;
+    --bs-navbar-bg: rgba(255, 255, 255, 0.9);
+    --bs-footer-bg: #e9ecef;
+}
+
+/* --- Dark Mode Variables --- */
+[data-bs-theme="dark"] {
+    --bs-body-bg: #1a1a1a;
+    --bs-body-color: #e0e0e0;
+    --bs-primary: #42a5f5;
+    --bs-secondary: #90a4ae;
+    --bs-card-bg: #2c2c2c;
+    --bs-navbar-bg: rgba(33, 37, 41, 0.9);
+    --bs-footer-bg: #212529;
+    --bs-table-striped-bg: #2c2c2c;
+    --bs-table-striped-color: #e0e0e0;
+    --bs-table-bg: #212529;
+    --bs-table-color: #e0e0e0;
+    --bs-table-border-color: #454d55;
+}
+
+/* --- Header & Footer --- */
+.navbar {
+    background-color: var(--bs-navbar-bg);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+footer {
+    background-color: var(--bs-footer-bg);
+}
+
+/* --- Custom Button & Hover --- */
+.custom-btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Home Page: Hero --- */
+.hero-section {
+    min-height: 60vh;
+    background: url('https://via.placeholder.com/1500x700/455A64/FFFFFF?text=Fitness+Studio+Hero') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.hero-section h1 {
+    font-weight: 700;
+}
+
+/* --- Home & Trainers: Cards --- */
+.program-card, .trainer-card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--bs-card-bg);
+}
+.program-card:hover, .trainer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.trainer-card img {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+/* --- Schedule Page: Table --- */
+.schedule-table {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.schedule-table th, .schedule-table td {
+    vertical-align: middle;
+}
+
+
